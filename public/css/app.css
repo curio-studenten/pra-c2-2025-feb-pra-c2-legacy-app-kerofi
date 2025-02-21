@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
+@CHARSET 'UTF-8';
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -572,6 +572,7 @@ pre code {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    justify-content: center;
 }
 
 .no-gutters {
