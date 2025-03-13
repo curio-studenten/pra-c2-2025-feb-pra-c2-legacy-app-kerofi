@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @CHARSET 'UTF-8';
 /*!
- * Bootstrap v4.6.0 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+* Bootstrap v4.6.0 (https://getbootstrap.com/)
+* Copyright 2011-2021 The Bootstrap Authors
+* Copyright 2011-2021 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+*/
 :root {
     --blue: #3490dc;
     --indigo: #6574cd;
@@ -5535,6 +5535,102 @@ a.close.disabled {
     margin: 0.25rem;
 }
 
+footer {
+    background-color: #e8ecef;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    margin: 0px 205px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+    width: 30%;
+    padding: 10px;
+}
+
+.footer-about h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-about p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-contact ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li,
+.footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-contact strong,
+.footer-social a {
+    font-weight: bold;
+}
+
+
+.footer-contact a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #bdc3c7;
+}
+
+.footer-bottom p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-about,
+    .footer-contact,
+    .footer-social {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .modal-scrollbar-measure {
     position: absolute;
     top: -9999px;
@@ -10043,3 +10139,4 @@ a.text-dark:hover, a.text-dark:focus {
     color: black;
 
 }
+
