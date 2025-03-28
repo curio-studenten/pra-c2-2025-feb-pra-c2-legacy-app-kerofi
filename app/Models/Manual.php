@@ -4,10 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Manual extends Model
 {
     use HasFactory;
+
+    public function brand(): BelongsTo
+    {
+        return $this->belongsTo(brand::class);
+    }
 
     // Returns the filesize in a human readable format
     public function getFilesizeHumanReadableAttribute(){
@@ -16,13 +22,13 @@ class Manual extends Model
         $unit = "";
 
         if( (!$unit && $size >= 1<<30) || $unit == "GB")
-            $value = number_format($size/(1<<30),2)."GB";
+        $value = number_format($size/(1<<30),2)."GB";
         elseif( (!$unit && $size >= 1<<20) || $unit == "MB")
-            $value = number_format($size/(1<<20),2)."MB";
+        $value = number_format($size/(1<<20),2)."MB";
         elseif( (!$unit && $size >= 1<<10) || $unit == "KB")
-            $value = number_format($size/(1<<10),2)."KB";
+        $value = number_format($size/(1<<10),2)."KB";
         else
-            $value = number_format($size)." bytes";
+        $value = number_format($size)." bytes";
 
         return $value;
     }
@@ -47,9 +53,9 @@ class Manual extends Model
 
         // If it's downloaded a filename is available, link to our own CDN
         if( !empty($filename ) )
-            $url = 'http://cdn.downloadyourmanual.com/'.$filename;
+        $url = 'http://cdn.downloadyourmanual.com/'.$filename;
         else	// If it's not download, link to the origin
-            $url = $originUrl;
+        $url = $originUrl;
 
         return $url; */
     }
